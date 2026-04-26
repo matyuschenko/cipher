@@ -53,6 +53,7 @@ my-agent/
 |-- .gitignore
 |-- agent.py
 |-- config.py
+|-- README.md
 |-- requirements.txt
 |-- setup/
     |-- changelog.md
