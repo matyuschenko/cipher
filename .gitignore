@@ -1,4 +1,5 @@
 .DS_Store
 config.py
+memory/memory.md
 memory/user.md
 setup/user.md
