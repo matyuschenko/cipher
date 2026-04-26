@@ -6,3 +6,5 @@ This repository requires a few extra files to work properly:
 - _setup/user.md_: containing any information you want the model to know about you
 
 Once set up, navigate to the project folder, run `python3 agent.py` and start chatting. Cipher will record important information and use it in future sessions.
+
+Feel free to change the agent's personality in _setup/system_prompt.py_.
