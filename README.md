@@ -10,3 +10,5 @@ This repository requires a few extra files to work properly:
 Once set up, navigate to the project folder, run `python3 agent.py` and start chatting. Cipher will record important information and use it in future sessions.
 
 Feel free to change the agent's personality in _setup/system_prompt.py_.
+
+Inspired by [Molty](https://www.molty.me/), and some of its and [Openclaw's](https://openclaw.ai/) approaches were reused in the system prompt.
