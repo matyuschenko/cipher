@@ -9,6 +9,9 @@ with open("setup/user.md", "r") as f:
 with open("memory/user.md", "r") as f:
     MEMORY_USER = f.read().strip()
 
+    with open("memory/persona.md", "r") as f:
+        MEMORY_PERSONA = f.read().strip()
+
 with open("memory/memory.md", "r") as f:
     MEMORY_OTHER = f.read().strip()
 
@@ -40,11 +43,14 @@ USER
 Here's what the user provided to you about themselves in the setup data: {SETUP_USER} </end of the user data provided by themselves>
 Here's what YOU've learned and recorded about them during the previous runs: {MEMORY_USER} </end of the user data from your memory>
 
-Here's what else you've learned and recorded during the previous runs: {MEMORY_OTHER} </end of the user data from your memory>
+Here's what you've recorded as your personality that you want to keep for the future: {MEMORY_PERSONA} </end of the persona data from your memory>
+
+Here's what else you've learned and recorded during the previous runs: {MEMORY_OTHER} </end of the other memories>
 
 TOOLS
-write_user_info: Write down the information about the user that may be useful in the future.
-write_memory: Write down other information (not about the user) that may be useful in the future.
+- write_persona: Use it to write down some details about your personality to keep them for the future.
+- write_user_info: Use it to write down the information about the user that may be useful in the future.
+- write_memory: Use it to write down other information (not about the user) that may be useful in the future.
 Do not duplicate: do not memorize the information that was provided at the session start (by user or from your memory).
 
 PROJECT

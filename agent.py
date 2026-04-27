@@ -34,6 +34,14 @@ def write_memory(memory_information: str) -> None:
         f.write("\n" + memory_information)
 
 
+def write_persona(persona_information: str) -> None:
+    """
+    Record some information about the agent's persona -- to store it for the future.
+    """
+    with open("memory/persona.md", "a") as f:
+        f.write("\n" + persona_information)
+
+
 tools = [
     {
         "type": "function",
@@ -69,11 +77,29 @@ tools = [
             },
         },
     },
+    {
+        "type": "function",
+        "function": {
+            "name": "write_persona",
+            "description": "Record some information about the agent's persona -- to store it for the future.",
+            "parameters": {
+                "type": "string",
+                "properties": {
+                    "persona_information": {
+                        "type": "string",
+                        "description": "Information about the agent's personality that they want to keep.",
+                    }
+                },
+                "required": ["persona_information"],
+            },
+        },
+    },
 ]
 
 tool_map = {
     "write_user_info": write_user_info,
     "write_memory": write_memory,
+    "write_persona": write_persona,
 }
 
 
