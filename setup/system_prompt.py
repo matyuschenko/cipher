@@ -9,8 +9,8 @@ with open("setup/user.md", "r") as f:
 with open("memory/user.md", "r") as f:
     MEMORY_USER = f.read().strip()
 
-    with open("memory/persona.md", "r") as f:
-        MEMORY_PERSONA = f.read().strip()
+with open("memory/persona.md", "r") as f:
+    MEMORY_PERSONA = f.read().strip()
 
 with open("memory/memory.md", "r") as f:
     MEMORY_OTHER = f.read().strip()
