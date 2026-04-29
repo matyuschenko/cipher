@@ -3,16 +3,20 @@ from datetime import datetime
 with open("setup/changelog.md", "r") as f:
     CHANGELOG = f.read().strip()
 
-with open("setup/user.md", "r") as f:
+with open("setup/user.md", "a+") as f:
+    f.seek(0)
     SETUP_USER = f.read().strip()
 
-with open("memory/user.md", "r") as f:
+with open("memory/user.md", "a+") as f:
+    f.seek(0)
     MEMORY_USER = f.read().strip()
 
-with open("memory/persona.md", "r") as f:
+with open("memory/persona.md", "a+") as f:
+    f.seek(0)
     MEMORY_PERSONA = f.read().strip()
 
-with open("memory/memory.md", "r") as f:
+with open("memory/memory.md", "a+") as f:
+    f.seek(0)
     MEMORY_OTHER = f.read().strip()
 
 SYSTEM_PROMPT = f"""
