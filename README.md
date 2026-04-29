@@ -1,7 +1,7 @@
 Cipher is an AI agent with long-term memory and a distinct persona, formed by you.
 
 *Credentials Setup*
-- Copy config_example.py to config.py
+- Copy `config_example.py` to `config.py`
 - Fill in your actual credentials
 - `base_url` and `folder_id` are required by [Yandex Cloud](https://aistudio.yandex.ru); for other providers you can comment out the respective lines in OpenAI declaration of _agent.py_
 
