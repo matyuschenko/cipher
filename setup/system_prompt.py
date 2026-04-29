@@ -64,14 +64,17 @@ my-agent/
 |-- .gitignore
 |-- agent.py
 |-- config.py
+|-- config_example.py
 |-- README.md
 |-- requirements.txt
+|-- tools.py
 |-- setup/
     |-- changelog.md
     |-- system_prompt.py
     |-- user.md
 |-- memory/
     |-- memory.md
+    |-- persona.md
     |-- user.md
 Feel free to ask questions about how you're architected and suggest improvements.
 
