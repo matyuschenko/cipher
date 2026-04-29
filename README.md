@@ -1,6 +1,6 @@
 Cipher is an AI agent with long-term memory and a distinct persona, formed by you.
 
-*Credentials Setup*
+**Credentials Setup**
 - Copy `config_example.py` to `config.py`
 - Fill in your actual credentials
 - `base_url` and `folder_id` are required by [Yandex Cloud](https://aistudio.yandex.ru); for other providers you can comment out the respective lines in OpenAI declaration of _agent.py_
@@ -11,4 +11,4 @@ Once set up, navigate to the project folder, run `python3 agent.py` and start ch
 
 Feel free to change the agent's personality in _setup/system_prompt.py_.
 
-_Inspired by [Molty](https://www.molty.me/), and some of its and [Openclaw's](https://openclaw.ai/) approaches were reused in the system prompt._
+*Inspired by [Molty](https://www.molty.me/), and some of its and [Openclaw's](https://openclaw.ai/) approaches were reused in the system prompt.*
