@@ -1,4 +1,7 @@
 from datetime import datetime
+from pathlib import Path
+
+Path("memory").mkdir(exist_ok=True)
 
 with open("setup/changelog.md", "r") as f:
     CHANGELOG = f.read().strip()
