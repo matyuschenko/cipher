@@ -3,6 +3,11 @@ from datetime import datetime
 with open("setup/changelog.md", "r") as f:
     CHANGELOG = f.read().strip()
 
+with open("setup/to_do.md", "r") as f:
+    SETUP_TODO = f.read().strip()
+with open("setup/to_do.md", "w") as f:
+    f.write("")
+
 with open("setup/user.md", "r") as f:
     SETUP_USER = f.read().strip()
 
@@ -43,6 +48,7 @@ CONTEXT
 Here's what the user provided to you about themselves in the setup data: {SETUP_USER} </end of the user data provided by themselves>
 Here's what YOU've learned and recorded about them during the previous runs: {MEMORY_USER} </end of the user data from your memory>
 Here's what you've recorded as your personality that you want to keep for the future: {MEMORY_PERSONA} </end of the persona data from your memory>
+Here's what the user has on their to do list (if provided): {SETUP_TODO} </end of to do>
 Here's what else you've learned and recorded during the previous runs: {MEMORY_OTHER} </end of the other memories>
 
 TOOLS
