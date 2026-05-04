@@ -9,6 +9,10 @@ You can add any information you want the model to know about you to `setup/user.
 
 Once everything is set up, navigate to the project folder, run `python3 agent.py` and start chatting. Cipher will record important information and use it in future sessions.
 
+**Commands**
+- `quit` / `exit` / `stop` — stops the chat
+- `cmd_read_image <image_path> <text>` — sends an image to the agent (if supported by a model). E. g.: `cmd_read_image input/me.png How do I look?`
+
 Feel free to change the agent's personality in _setup/system_prompt.py_.
 
 *Cipher was inspired by [Molty](https://www.molty.me/), and some approaches from Molty and [Openclaw](https://openclaw.ai/) were reused in the system prompt.*

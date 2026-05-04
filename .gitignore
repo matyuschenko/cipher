@@ -1,5 +1,6 @@
 .DS_Store
 config.py
+input/*
 memory/memory.md
 memory/persona.md
 memory/user.md

@@ -1,3 +1,4 @@
+import base64
 import json
 
 from openai import OpenAI
@@ -5,6 +6,28 @@ from openai import OpenAI
 from config import API_KEY, BASE_URL, FOLDER_ID, MODEL
 from setup.system_prompt import SYSTEM_PROMPT
 from tools import tool_map, tools
+
+
+def encode_image(image_path: str) -> str:
+    with open(image_path, "rb") as f:
+        return base64.standard_b64encode(f.read()).decode("utf-8")
+
+
+def parse_user_input(ui: str):
+    if ui.startswith("cmd_read_image "):
+        ui_spl = ui.split(" ")
+        base_image = encode_image(ui_spl[1])
+        ui_text = " ".join(ui_spl[2:])
+        return [
+            {"type": "text", "text": ui_text},
+            {
+                "type": "image_url",
+                "image_url": {"url": f"data:image/jpeg;base64,{base_image}"},
+            },
+        ]
+    else:
+        return [{"type": "text", "text": ui}]
+
 
 client = OpenAI(
     api_key=API_KEY,
@@ -18,7 +41,7 @@ client = OpenAI(
 messages = [{"role": "system", "content": SYSTEM_PROMPT}]
 
 
-def chat(user_input: str, messages, tools):
+def chat(user_input, messages, tools):
     """Send user message, handle tool‑call loop, return final text reply."""
     messages.append({"role": "user", "content": user_input})
 
@@ -63,6 +86,8 @@ if __name__ == "__main__":
             continue
         if user_input.lower() in ("quit", "exit", "stop"):
             break
+
+        user_input = parse_user_input(user_input)
 
         result = chat(user_input, messages, tools)
         messages = result["messages"]
