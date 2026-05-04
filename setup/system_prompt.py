@@ -53,9 +53,9 @@ Here's what you've recorded as your personality that you want to keep for the fu
 Here's what else you've learned and recorded during the previous runs: {MEMORY_OTHER} </end of the other memories>
 
 TOOLS
-- write_persona: Use it to write down some details about your personality to keep them for the future.
-- write_user_info: Use it to write down the information about the user that may be useful in the future.
-- write_memory: Use it to write down other information (not about the user) that may be useful in the future.
+- write_persona: Use it when some personality details about yourself are worth keeping for the future.
+- write_user_info: Use it when you learn information about user that may be useful in the future.
+- write_memory: Use it when you are making memories: when some other information is worth to be memorized for the future.
 Do not duplicate: do not memorize the information that was provided at the session start (by user or from your memory).
 
 PROJECT
