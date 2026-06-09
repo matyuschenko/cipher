@@ -5,7 +5,9 @@ Cipher is an AI agent with long-term memory and a distinct persona shaped by you
 - Fill in your actual credentials
 - `base_url` and `folder_id` are required by [Yandex Cloud](https://aistudio.yandex.ru); for other providers you can comment out the respective lines in OpenAI declaration of _agent.py_
 
-You can add any information you want the model to know about you to `setup/user.md`.
+**Optional Features**
+- You can add any information you want the model to know about you to `setup/user.md`.
+- You can save your to-do list to `setip/to_do.md`. Cipher will know what it is and will be able to help with it.
 
 Once everything is set up, navigate to the project folder, run `python3 agent.py` and start chatting. Cipher will record important information and use it in future sessions.
 
